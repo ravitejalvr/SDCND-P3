@@ -16,14 +16,14 @@ The following files were submitted as a part of this project
 * `drive.py` For connecting to simulator and driving the car in autonomous mode
 * `video.mp4` Recorded video of the run
 
-### Collection of training data
+#### Collection of training data
 Training data was chosen to keep the vehicle driving on the road. I collected the training data in the following manner:
 - two laps of center lane driving
 - two laps of center lane driving in reverse manner
 - one lap of recovery driving from the sides
 - one lap focusing on driving smoothly around curves
 
-##### Data Preprocessing
+#### Data Preprocessing
 - The images are cropped and resized to 66x200 so that its same as NVIDIA model
 - Then, images were normalized for zero mean and unit variance (divided by 255 and subtracted 1.0) for faster convergence.
 
