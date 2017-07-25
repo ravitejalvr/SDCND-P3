@@ -49,11 +49,11 @@ Here is an example of images before and after image augmentation:
 
 Before Augmentation:
 
-[img_normal](./images/normal.jpg "Before Augmented")
+[img_normal](/images/normal.jpg "Before Augmented")
 
 After Augmentation
 
-[img_augmented](./images/augmented.jpg "Augmented")
+[img_augmented](/images/augmented.jpg "Augmented")
 
 #### Convolutional Neural Network Features
 
