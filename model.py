@@ -5,7 +5,7 @@ model.py is used for generating model.h5, which is used to create video file of 
 '''
 
 import cv2
-from keras.layers import Flatten, Dense,  Cropping2D, Conv2D,Dropout, Lambda
+from keras.layers import Flatten, Dense,  Cropping2D, Conv2D, Lambda
 from keras.models import Sequential
 from keras.regularizers import l2
 from keras.layers.normalization import BatchNormalization
@@ -23,7 +23,7 @@ def image_augment(img_path, angle):
     
     img = cv2.imread(img_path)
     img = cv2.resize(img, (img_width, img_height), cv2.INTER_CUBIC)
-    img = cv2.cvtColor(img, cv2.COLOR_GBR2HSV)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     br_ratio = 1.0 + 0.3 * (np.random.rand() - 0.5)
     img[:, :, 2] = img[:, :, 2] * br_ratio
     img = cv2.cvtColor(img, cv2.COLOR_HSV2RGB)
@@ -75,8 +75,6 @@ model.add(Conv2D(48, kernel_size=(5, 5), strides=(2, 2), activation='relu'))
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
     # Fifth Convoluted layer with depth to 64
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
-    # Droput with Probability of 0.5 for avoiding overfitting
-model.add(Dropout(0.5))
     # Flatten Image
 model.add(Flatten())
     # Reduce layers to 100
@@ -105,7 +103,7 @@ batch_size=512
 history_object = model.fit_generator(training_generator, steps_per_epoch=len(training_data) // batch_size,
                                          validation_data=validation_generator,
                                          validation_steps=len(validation_data) // batch_size,
-                                         epochs=10,verbose = 1)
+                                         epochs=15,verbose = 1)
 # Saved Model
 model.save('model.h5')
 print('Model Saved...:)')
