@@ -23,7 +23,7 @@ def image_augment(img_path, angle):
     
     img = cv2.imread(img_path)
     img = cv2.resize(img, (img_width, img_height), cv2.INTER_CUBIC)
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    img = cv2.cvtColor(img, cv2.COLOR_GBR2HSV)
     br_ratio = 1.0 + 0.3 * (np.random.rand() - 0.5)
     img[:, :, 2] = img[:, :, 2] * br_ratio
     img = cv2.cvtColor(img, cv2.COLOR_HSV2RGB)
@@ -37,7 +37,7 @@ def image_augment(img_path, angle):
 def generator(log, batch_size=32, data_path='../data/IMG/'):
     
     # Correction for coming to center of the road
-    correc = 0.3
+    correc = 0.25
     steer_correc = [0, correc, -correc]
 
     header = list(log.columns.values)
@@ -105,7 +105,7 @@ batch_size=512
 history_object = model.fit_generator(training_generator, steps_per_epoch=len(training_data) // batch_size,
                                          validation_data=validation_generator,
                                          validation_steps=len(validation_data) // batch_size,
-                                         epochs=5,verbose = 1)
+                                         epochs=10,verbose = 1)
 # Saved Model
 model.save('model.h5')
 print('Model Saved...:)')
