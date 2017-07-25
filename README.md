@@ -15,8 +15,9 @@ The following files were submitted as a part of this project
 * `model.h5` File which contains weights and details of trained Convolutional Neural Network
 * `drive.py` For connecting to simulator and driving the car in autonomous mode
 * `video.mp4` Recorded video of the run
-[img_normal]: ../images/normal.jpg "Before Augmented"
-[img_augmented]: ../images/augmented.jpg "Augmented"
+
+[img_normal]: (../images/normal.jpg?raw=true "Before Augmented")
+[img_augmented]: (../images/augmented.jpg?raw=true "Augmented")
 
 ##### Output video
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/39qgJ9l7mj4/0.jpg)](https://youtu.be/39qgJ9l7mj4)
