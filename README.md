@@ -16,6 +16,9 @@ The following files were submitted as a part of this project
 * `drive.py` For connecting to simulator and driving the car in autonomous mode
 * `video.mp4` Recorded video of the run
 
+##### Output video
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/vL1-GT8rlxM/0.jpg)](https://youtu.be/vL1-GT8rlxM)
+
 #### Collection of training data
 Training data was chosen to keep the vehicle driving on the road. I collected the training data in the following manner:
 - two laps of center lane driving
@@ -25,7 +28,13 @@ Training data was chosen to keep the vehicle driving on the road. I collected th
 
 #### Data Preprocessing
 - The images are cropped and resized to 66x200 so that its same as NVIDIA model
-- Then, images were normalized for zero mean and unit variance (divided by 255 and subtracted 1.0) for faster convergence.
+- Then, images were normalized for zero mean and unit variance (divided by 255 and subtracted 1.0) for faster convergence and no     overfitting.
+
+#### Overfitting of Model
+Overfitting can be huge issue while using Neural Networks and hence to curb this issue the following methodologies were implemented:
+
+- The image is normalized to zero mean and unit variance. 
+- Dropout of probability 0.5 is implemented for having randomly dropped some of the nets.
 
 #### Data Augmentation
 The following techniques were used for data augmentation 
@@ -67,3 +76,5 @@ The tuned model is then saved into model.h5 file, which is then used in drive.py
 #### Results
 The model can drive the course smoothly without going off the track.  
 The video file attached in this file explains it. 
+Also Youtube video link is given below:
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/vL1-GT8rlxM/0.jpg)](https://youtu.be/vL1-GT8rlxM)
