@@ -49,11 +49,11 @@ Here is an example of images before and after image augmentation:
 
 Before Augmentation:
 
-![img_normal](C:\Project\Project-3\CarND-Behavioral-Cloning-P3-master\images\normal.jpg)
+![img_normal](http://i.imgur.com/REHRV6c.png)
 
 After Augmentation
 
-![img_augmented](C:\Project\Project-3\CarND-Behavioral-Cloning-P3-master\images\normal.jpg)
+![img_augmented](http://i.imgur.com/qXVQwn9.png)
 
 #### Convolutional Neural Network Features
 
