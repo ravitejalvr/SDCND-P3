@@ -86,7 +86,7 @@ model.add(Dense(50,activation='relu'))
     # Reduce layers to 10
 model.add(Dense(10,activation='relu'))    
     # Final Layer for steeering angle
-model.add(Dense(1,activation='relu'))          
+model.add(Dense(1)          
     # Selection of optimizer and error. Selected MSE as it is only one value
 
 data_log = pd.read_csv('../data/driving_log.csv')
