@@ -49,11 +49,11 @@ Here is an example of images before and after image augmentation:
 
 Before Augmentation:
 
-[img_normal](http://imgur.com/446xQfv)
+![img_normal](http://imgur.com/446xQfv)
 
 After Augmentation
 
-[img_augmented](http://imgur.com/OHzbvUl)
+![img_augmented](http://imgur.com/OHzbvUl)
 
 #### Convolutional Neural Network Features
 
