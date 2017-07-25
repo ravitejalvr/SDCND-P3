@@ -15,9 +15,11 @@ The following files were submitted as a part of this project
 * `model.h5` File which contains weights and details of trained Convolutional Neural Network
 * `drive.py` For connecting to simulator and driving the car in autonomous mode
 * `video.mp4` Recorded video of the run
+[img_normal]: ../images/normal.jpg "Before Augmented"
+[img_augmented]: ../images/augmented.jpg "Augmented"
 
 ##### Output video
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/vL1-GT8rlxM/0.jpg)](https://youtu.be/vL1-GT8rlxM)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/39qgJ9l7mj4/0.jpg)](https://youtu.be/39qgJ9l7mj4)
 
 #### Collection of training data
 Training data was chosen to keep the vehicle driving on the road. I collected the training data in the following manner:
@@ -36,14 +38,21 @@ Overfitting can be huge issue while using Neural Networks and hence to curb this
 - The image is normalized to zero mean and unit variance. 
 - Dropout of probability 0.5 is implemented for having randomly dropped some of the nets.
 
-#### Data Augmentation
+#### Image Augmentation
 The following techniques were used for data augmentation 
 
 - Randomly increase steering anglr For left image, right image by 0.25 towards center of lane.
 - Randomly flip images such that model is trained both sides.
 - Change brightness randomly such that image is adjucted to all conditions.
 
-The data is also randomly shuffled and 20 & data is used in validation set.
+The images are also randomly shuffled and 20 & data is used in validation set.
+
+Here is an example of images before and after image augmentation:
+Before Augmentation:
+![img_normal]
+
+After Augmentation
+![img_augmented]
 
 #### Convolutional Neural Network Features
 
@@ -77,4 +86,4 @@ The tuned model is then saved into model.h5 file, which is then used in drive.py
 The model can drive the course smoothly without going off the track.  
 The video file attached in this file explains it. 
 Also Youtube video link is given below:
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/vL1-GT8rlxM/0.jpg)](https://youtu.be/vL1-GT8rlxM)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/39qgJ9l7mj4/0.jpg)](https://youtu.be/39qgJ9l7mj4)
