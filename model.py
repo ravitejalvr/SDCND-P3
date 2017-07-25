@@ -5,7 +5,7 @@ model.py is used for generating model.h5, which is used to create video file of 
 '''
 
 import cv2
-from keras.layers import Flatten, Dense,  Cropping2D, Conv2D, Lambda
+from keras.layers import Flatten, Dense,  Cropping2D, Conv2D,Dropout, Lambda
 from keras.models import Sequential
 from keras.regularizers import l2
 from keras.layers.normalization import BatchNormalization
@@ -75,6 +75,8 @@ model.add(Conv2D(48, kernel_size=(5, 5), strides=(2, 2), activation='relu'))
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
     # Fifth Convoluted layer with depth to 64
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
+    # Droput with Probability of 0.5 for avoiding overfitting
+model.add(Dropout(0.5))
     # Flatten Image
 model.add(Flatten())
     # Reduce layers to 100
