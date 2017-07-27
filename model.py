@@ -96,14 +96,14 @@ validation_generator = generator(validation_data, batch_size=512)
 
 print('Training...\n')
 
-model.compile(loss='mean_squared_error', optimizer=Adam(lr=1e-4))
+model.compile(loss='mean_squared_error', optimizer=Adam(lr = 1e-4))
 print(model.summary())
 
 batch_size=512
 history_object = model.fit_generator(training_generator, steps_per_epoch=len(training_data) // batch_size,
                                          validation_data=validation_generator,
                                          validation_steps=len(validation_data) // batch_size,
-                                         epochs=15,verbose = 1)
+                                         epochs=5,verbose = 1)
 # Saved Model
 model.save('model.h5')
 print('Model Saved...:)')
