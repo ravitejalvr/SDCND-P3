@@ -17,7 +17,8 @@ The following files were submitted as a part of this project
 * `video.mp4` Recorded video of the run
 
 ##### Output video
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/39qgJ9l7mj4/0.jpg)](https://youtu.be/39qgJ9l7mj4)
+Please note that I am uploading 3 full runs of model recorded using the same files uploaded in Guthub. It can be due to the change in version of Keras or other libraries that sometimes it doesn't work in your computer. So, please consider this video as 3 full runs without crossing lanes is recorded.
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YrfccaYvICc/0.jpg)](https://youtu.be/YrfccaYvICc)
 
 #### Collection of training data
 Training data was chosen to keep the vehicle driving on the road. I collected the training data in the following manner:
@@ -87,4 +88,4 @@ The tuned model is then saved into model.h5 file, which is then used in drive.py
 The model can drive the course smoothly without going off the track.  
 The video file attached in this file explains it. 
 Also Youtube video link is given below:
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/39qgJ9l7mj4/0.jpg)](https://youtu.be/39qgJ9l7mj4)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YrfccaYvICc/0.jpg)](https://youtu.be/YrfccaYvICc)
